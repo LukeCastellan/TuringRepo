@@ -17,9 +17,15 @@
 var userinnumber : real
 
 loop
-    put "Please enter any real number: " ..
+    put "Please enter any real number, enter 0 to exit: " ..
 
     get userinnumber
+
+    if userinnumber = 0
+	    then
+	put "Exiting, do not look at antimemetic [REDACTED]-7"
+	exit
+    end if
 
     if userinnumber mod 7 = 0
 	    then

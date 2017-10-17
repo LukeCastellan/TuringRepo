@@ -17,15 +17,21 @@ var leftoverstudents : int
 var userinstudents : int
 
 loop
-    put "Please enter the number of students: " ..
+    put "Please enter the number of students, enter negative amount to exit: " ..
 
     get userinstudents
+
+    if userinstudents < 0
+	    then
+	put "Exiting, groups disseminated for [DATA EXPUNGED]"
+	exit
+    end if
 
     groupsformed := userinstudents div 4
 
     leftoverstudents := userinstudents mod 4
 
-    put "You can form ", groupsformed, " groups "..
+    put "You can form ", groupsformed, " groups " ..
 
     put "with ", leftoverstudents, " Students left over."
 
