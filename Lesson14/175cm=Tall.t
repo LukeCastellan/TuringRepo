@@ -15,7 +15,9 @@
 var userinheight : real
 
 loop
-    put "Please enter your height in centimeters: " ..
+    put "Please enter your height in centimeters;"  
+    put "Enter a negative height to exit: "
+    put "Height: "..
 
     get userinheight
 
@@ -23,5 +25,9 @@ loop
 	    then
 	put "You are tall!"
 	put skip
+	elsif userinheight <0
+	then
+	put "Exiting, administering Class-A Amnestics for witnessing [REDACTED]."
+	exit
     end if
 end loop

@@ -15,7 +15,7 @@
 var userintemp : real
 
 loop
-    put "Please enter the temperature: "..
+    put "Please enter the temperature, enter below Absolute Zero to exit: "
 
     get userintemp
 
@@ -23,6 +23,10 @@ loop
 	    then
 	put "It is hot!"
 	put skip
+    elsif userintemp < -273.156
+	    then
+	put "Exiting, the room now feels [DATA EXPUNGED]"
+	exit
     else
 	put "It is not that hot, deal with it."
 	put skip

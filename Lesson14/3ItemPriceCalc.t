@@ -33,9 +33,20 @@ var subtotal : real
 var subtotalavg : real
 
 loop
+
+    put "Welcome to grocery calculator!" ..
+
+    put "To exit, enter a negative price for item 1."
+
     put "Please enter the price for item #1: $" ..
 
     get itemprice1
+
+    if itemprice1 < 0
+	    then
+	put "Exiting, payed with [REDACTED] card, card holder O5-[REDACTED]"
+	exit
+    end if
 
     put "Please enter the quantity for item #1: " ..
 
