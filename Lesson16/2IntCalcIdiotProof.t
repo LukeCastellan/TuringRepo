@@ -24,7 +24,8 @@ loop
     get userinnumber1, denote, userinnumber2
     if userinnumber2 = 0
 	    then
-	quit
+	    put "Exiting to prevent XK-Class scenario."
+	exit
     end if
     case denote of
 	label "+" :

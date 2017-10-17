@@ -1,6 +1,6 @@
 % programmer: Paul Kuang
 %
-%       date: 2017-10-04
+%       date: 2017-10-11
 %
 %  file name: ColorsoftheRainbow.t
 %
@@ -15,17 +15,25 @@
 var userincolor : string
 
 loop
-    put "Please enter a color: " ..
+    put "Please enter a color, enter transparent to exit: "
+    
+    put "Color: "..
 
     get userincolor
 
-    case userincolor of 
+    if userincolor = "transparent"
+	    then
+	put "Exiting, rainbow is now [REDACTED]."
+	exit
+    end if
+
+    case userincolor of
 	label "Red" :
 	    color (red)
 	    put "Red is a color of the rainbow."
 	    color (black)
 	label "Orange" :
-	color (41)
+	    color (41)
 	    put "Orange is a color of the rainbow."
 	    color (black)
 	label "Yellow" :
