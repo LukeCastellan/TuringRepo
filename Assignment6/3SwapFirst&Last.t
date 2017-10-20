@@ -12,6 +12,10 @@
 %
 %     output:
 
+var firstchar : char
+var lastchar : char
+var midword : string
+var systemoutword : string
 var userinword : string
 
 loop
@@ -23,10 +27,10 @@ loop
 	put "Exiting, it is now safe to [REDACTED]"
 	quit
     end if
-    for decreasing startint : length (userinword) .. 1
-	put userinword (startint)
-    end for
+    midword := userinword (2 .. * -1)
+    firstchar := userinword (1)
+    lastchar := userinword (*)
+    systemoutword := lastchar + midword + firstchar
+    put systemoutword
     put skip
 end loop
-
-
