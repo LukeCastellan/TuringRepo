@@ -1,14 +1,16 @@
 function doubleNum (input : real) : real
-result input*2
+    result input * 2
 end doubleNum
 
 var userinnum : real
 
 put "Enter number to double."
-put "The program exits automatically when the input is too big."
-loop
-put "Num: "..
+put "The program exits automatically when the limit is reached."
+
+put "Num: " ..
 get userinnum
-exit when userinnum >= 1073741820
-put doubleNum(userinnum)
+loop
+    put doubleNum (userinnum)
+    userinnum := doubleNum (userinnum)
+    exit when userinnum > 107000000
 end loop
