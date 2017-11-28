@@ -1,7 +1,7 @@
 import GUI
 
 View.Set ("graphics:500;500;nobuttonbar")
-Window.Set (defWinId, "title:Two Games.")
+Window.Set (defWinId, "title:Three Games.")
 GUI.SetBackgroundColor (darkgrey)
 
 var backButton : int
